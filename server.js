@@ -1,9 +1,16 @@
-var express = require('express')
-var app = express();
-
-var port = process.env.PORT || 8080
+const express = require('express')
+const app = express()
+const router = express.Router()
+const port = process.env.PORT || 8080
 app.use(express.static(__dirname))
 
-app.get(`/`, (req, res) => res.render(`index`) )
 
-app.listen(port, () => console.log(`app running`))
+router.get('/',(req,res) => res.sendFile(`${__dirname}/views/home.html`))
+router.get('/statistics',(req,res) => res.sendFile(`${__dirname}/views/statistics.html`))
+router.get('/news',(req,res) => res.sendFile(`${__dirname}/views/news.html`))
+router.get('/about',(req,res) => res.sendFile(`${__dirname}/views/about.html`))
+router.get('/help',(req,res) => res.sendFile(`${__dirname}/views/help.html`))
+
+
+app.use( '/' ,router);
+app.listen(port, () => console.log(`app running on port: ${port} ${__dirname}`))
