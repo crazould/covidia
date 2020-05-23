@@ -24,15 +24,7 @@ let showData = () => {
         
         if (xhr.readyState==4 && xhr.status==200) {
             let data = JSON.parse(xhr.responseText)
-            
-            total_cases: 790
-            total_recovered: 31
-            total_unresolved: 0
-            total_deaths: 58
-            total_new_cases_today: 0
-            total_new_deaths_today: 0
-            total_active_cases: 701
-            total_serious_cases: 
+        
 
             country.innerHTML = data.countrydata[0].info.title
             total.innerHTML = data.countrydata[0].total_cases
@@ -42,7 +34,6 @@ let showData = () => {
             newCasesToday.innerHTML = data.countrydata[0].total_new_cases_today
             activeCases.innerHTML = data.countrydata[0].total_active_cases
             seriousCases.innerHTML = data.countrydata[0].total_serious_cases
-            // console.log(data.countrydata[0])
             progress.style.display = "none";
 
         }
