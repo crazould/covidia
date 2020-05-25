@@ -1,39 +1,105 @@
-let app = document.getElementById("app")
-let content = document.getElementById("content")
-let progress =  document.getElementById("progress")
-let country = document.getElementById("country")
-let total = document.getElementById("total")
-let recovered = document.getElementById("recovered")
-let unresolved = document.getElementById("unresolved")
-let deaths = document.getElementById("deaths")
-let newCasesToday = document.getElementById("newCasesToday")
-let activeCases = document.getElementById("activeCases")
-let seriousCases = document.getElementById("seriousCases")
 
-// progress.style.display = "none";
+let firstCountry = document.getElementById("firstCountry")
+let secondCountry = document.getElementById("secondCountry")
+let firstCountryTotalCases = document.getElementById("firstCountryTotalCases")
+let secondCountryTotalCases = document.getElementById("secondCountryTotalCases")
+let firstCountryActiveCases = document.getElementById("firstCountryActiveCases")
+let secondCountryActiveCases = document.getElementById("secondCountryActiveCases")
+let firstCountryTotalRecovered = document.getElementById("firstCountryTotalRecovered")
+let secondCountryTotalRecovered = document.getElementById("secondCountryTotalRecovered")
+let firstCountryTotalDeaths = document.getElementById("firstCountryTotalDeaths")
+let secondCountryTotalDeaths = document.getElementById("secondCountryTotalDeaths")
+let firstCountryDeathsRatio = document.getElementById("firstCountryDeathsRatio")
+let secondCountryDeathsRatio = document.getElementById("secondCountryDeathsRatio")
 
-let showData = () => {
-    progress.style.display = "block";
-    let xhr = new XMLHttpRequest()
-    let url = "https://thevirustracker.com/free-api?countryTotal=ID"
-    xhr.open('GET', url, true);
-    xhr.onreadystatechange = () =>  {
-        if (xhr.readyState==4 && xhr.status==200) {
-            let data = JSON.parse(xhr.responseText)
-            country.innerHTML = data.countrydata[0].info.title
-            total.innerHTML = data.countrydata[0].total_cases
-            recovered.innerHTML = data.countrydata[0].total_recovered
-            unresolved.innerHTML = data.countrydata[0].total_unresolved
-            deaths.innerHTML = data.countrydata[0].total_deaths
-            newCasesToday.innerHTML = data.countrydata[0].total_new_cases_today
-            activeCases.innerHTML = data.countrydata[0].total_active_cases
-            seriousCases.innerHTML = data.countrydata[0].total_serious_cases
-            progress.style.display = "none";
+$("#firstCountry").select2({
+    placeholder: "Select Country",
+    allowClear: true
+})
+
+$("#secondCountry").select2({
+    placeholder: "Select Country",
+    allowClear: true
+})
+
+let showFirstCountryData = () => {
+    let firstCountryValue = firstCountry.value
+    let firstUrl = 'https://api.thevirustracker.com/free-api?countryTotal=' + firstCountryValue
+    if (firstCountryValue == `Global`) firstUrl = `https://api.thevirustracker.com/free-api?global=stats`
+
+
+    firstCountryTotalCases.innerHTML = 
+    firstCountryActiveCases.innerHTML = 
+    firstCountryTotalRecovered.innerHTML = 
+    firstCountryTotalDeaths.innerHTML = 
+    firstCountryDeathsRatio.innerHTML =
+    
+    `<div class='spinner-border' role='status'>
+        <span class='sr-only'>Loading...</span>
+    </div>`
+
+    $.ajax({
+        url: firstUrl,
+        dataType: 'json',
+        success: function (data) {
+            if (firstCountryValue == `Global`) {
+                firstCountryTotalCases.innerHTML = data.results[0].total_cases
+                firstCountryActiveCases.innerHTML = data.results[0].total_active_cases
+                firstCountryTotalRecovered.innerHTML = data.results[0].total_recovered
+                firstCountryTotalDeaths.innerHTML = data.results[0].total_deaths
+                firstCountryDeathsRatio.innerHTML = `${((firstCountryTotalDeaths.innerHTML / firstCountryTotalCases.innerHTML) * 100).toFixed(2)}%`
+            }
+            else {
+                firstCountryTotalCases.innerHTML = data.countrydata[0].total_cases
+                firstCountryActiveCases.innerHTML = data.countrydata[0].total_active_cases
+                firstCountryTotalRecovered.innerHTML = data.countrydata[0].total_recovered
+                firstCountryTotalDeaths.innerHTML = data.countrydata[0].total_deaths
+                firstCountryDeathsRatio.innerHTML = `${((firstCountryTotalDeaths.innerHTML / firstCountryTotalCases.innerHTML) * 100).toFixed(2)}%`
+            }
         }
-    }
-    xhr.onerror = () => console.log('There was an error!')
-    xhr.send();
+    });
 }
-// showBtn.addEventListener("click", showData)
+
+let showSecondCountryData = () => {
+    let secondCountryValue = secondCountry.value
+    let secondUrl = 'https://api.thevirustracker.com/free-api?countryTotal=' + secondCountryValue
+    if (secondCountryValue == `Global`) secondUrl = `https://api.thevirustracker.com/free-api?global=stats`
+
+    secondCountryTotalCases.innerHTML = 
+    secondCountryActiveCases.innerHTML = 
+    secondCountryTotalRecovered.innerHTML = 
+    secondCountryTotalDeaths.innerHTML = 
+    secondCountryDeathsRatio.innerHTML =
+    
+    `<div class='spinner-border' role='status'>
+        <span class='sr-only'>Loading...</span>
+    </div>`
+
+    $.ajax({
+        url: secondUrl,
+        dataType: 'json',
+        success: function (data) {
+            if (secondCountryValue == `Global`) {
+                secondCountryTotalCases.innerHTML = data.results[0].total_cases
+                secondCountryActiveCases.innerHTML = data.results[0].total_active_cases
+                secondCountryTotalRecovered.innerHTML = data.results[0].total_recovered
+                secondCountryTotalDeaths.innerHTML = data.results[0].total_deaths
+                secondCountryDeathsRatio.innerHTML = `${((secondCountryTotalDeaths.innerHTML / secondCountryTotalCases.innerHTML) * 100).toFixed(2)}%`
+            }
+            else {
+                secondCountryTotalCases.innerHTML = data.countrydata[0].total_cases
+                secondCountryActiveCases.innerHTML = data.countrydata[0].total_active_cases
+                secondCountryTotalRecovered.innerHTML = data.countrydata[0].total_recovered
+                secondCountryTotalDeaths.innerHTML = data.countrydata[0].total_deaths
+                secondCountryDeathsRatio.innerHTML = `${((secondCountryTotalDeaths.innerHTML / secondCountryTotalCases.innerHTML) * 100).toFixed(2)}%`
+            }
+        }
+    });
+}
+
+showFirstCountryData()
+showSecondCountryData()
+
+
 
 
