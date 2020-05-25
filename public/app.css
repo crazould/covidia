@@ -29,7 +29,11 @@ body {
 }
 
 .my-purple{
-    background-color: #993365;
+    color: #993365;
+}
+
+a.my-purple:hover{
+    color: #530229;
 }
 
 .my-container{
