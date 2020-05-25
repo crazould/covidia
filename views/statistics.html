@@ -1,50 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <link rel="stylesheet" href="public/app.css">
 
     <link rel="icon" type="image/png" href="public/logo.png">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="public/app.css">
 
     <title>covidia</title>
 </head>
+
 <body>
-   
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand mb-1 h1">Covidia</a>
-        <ul class="nav justify-content-end navbar-nav collapse navbar-collapse">
+
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark elegant-color">
+        <a class="navbar-brand" href="/">Covidia</a>
+        <ul class="navbar-nav nav mr-auto justify-content-end collapse navbar-collapse">
             <li class="nav-item">
-            <a class="nav-link" href="/">Beranda</a>
+                <a class="nav-link text-light" href="/">Beranda</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/statistics">Statistik</a>
+                <a class="nav-link text-light" href="/statistics">Statistik</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/news">Berita Terkini</a>
+                <a class="nav-link text-light" href="/news">Berita Terkini</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/about">Tentang kami</a>
+                <a class="nav-link text-light" href="/about">Tentang kami</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/help">Bantu Kami</a>
+                <a class="nav-link text-light" href="/support">Bantu Kami</a>
             </li>
         </ul>
     </nav>
 
+    <div class="container-fluid my-container my-purple text-light">
+        <div class="container horizontal-center pt-5">
 
-    <h1>statistics</h1>
+            <div class="row my-2 mb-3">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="firstCountry">Country</label>
+                        </div>
+                        <select class="custom-select" id="firstCountry">
+                            <option value="1">Indonesia</option>
+                            <option value="2">Global</option>
+                            <option value="3">Italia</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="secondCountry">Country</label>
+                        </div>
+                        <select class="custom-select" id="secondCountry">
+                            <option value="1">Global</option>
+                            <option value="2">Indonesia</option>
+                            <option value="3">Italia</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col bold-1">
+                    Terkonfirmasi
+                </div>
+                <div class="col text-end bold-1">
+                    2.421
+                </div>
+                <div class="col text-end bold-1">
+                    1.397.312
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col bold-1">
+                    Dalam Perawatan
+                </div>
+                <div class="col text-end bold-1">
+                    2.090
+                </div>
+                <div class="col text-end bold-1">
+                    1.017.866
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col bold-1">
+                    Sembuh
+                </div>
+                <div class="col text-end bold-1">
+                    192
+                </div>
+                <div class="col text-end bold-1">
+                    298.513
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col bold-1">
+                    Meninggal
+                </div>
+                <div class="col text-end bold-1">
+                    209
+                </div>
+                <div class="col text-end bold-1">
+                    80.933
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col bold-1">
+                    Rasio Kematian
+                </div>
+                <div class="col text-end bold-1">
+                    8.4%
+                </div>
+                <div class="col text-end bold-1">
+                    0.05%
+                </div>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+        </div>
+    </div>
+
+
+    <footer class="page-footer font-small elegant-color">
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright
+            <a href="/">covidia</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+    <script src="/controllers/index.js"></script>
 </body>
+
 </html>
-
-
-

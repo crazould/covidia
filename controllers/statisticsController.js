@@ -10,7 +10,7 @@ let newCasesToday = document.getElementById("newCasesToday")
 let activeCases = document.getElementById("activeCases")
 let seriousCases = document.getElementById("seriousCases")
 
-progress.style.display = "none";
+// progress.style.display = "none";
 
 let showData = () => {
     progress.style.display = "block";
@@ -34,6 +34,6 @@ let showData = () => {
     xhr.onerror = () => console.log('There was an error!')
     xhr.send();
 }
-showBtn.addEventListener("click", showData)
+// showBtn.addEventListener("click", showData)
 
 

@@ -9,8 +9,8 @@ router.get('/',(req,res) => res.sendFile(`${__dirname}/views/home.html`))
 router.get('/statistics',(req,res) => res.sendFile(`${__dirname}/views/statistics.html`))
 router.get('/news',(req,res) => res.sendFile(`${__dirname}/views/news.html`))
 router.get('/about',(req,res) => res.sendFile(`${__dirname}/views/about.html`))
-router.get('/help',(req,res) => res.sendFile(`${__dirname}/views/help.html`))
+router.get('/support',(req,res) => res.sendFile(`${__dirname}/views/support.html`))
 
 
 app.use( '/' ,router);
-app.listen(port, () => console.log(`app running on port: ${port} ${__dirname}`))
+app.listen(port, () => console.log(`app running on port: ${port}`))

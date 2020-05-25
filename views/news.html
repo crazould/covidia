@@ -3,46 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-    <link rel="stylesheet" href="public/app.css">
 
     <link rel="icon" type="image/png" href="public/logo.png">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="public/app.css">
 
     <title>covidia</title>
 </head>
 <body>
    
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-        <a class="navbar-brand mb-1 h1">Covidia</a>
-        <ul class="nav justify-content-end navbar-nav collapse navbar-collapse">
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark elegant-color">
+        <a class="navbar-brand" href="/">Covidia</a>
+        <ul class="navbar-nav nav mr-auto justify-content-end collapse navbar-collapse">
             <li class="nav-item">
-            <a class="nav-link" href="/">Beranda</a>
+                <a class="nav-link text-light" href="/">Beranda</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/statistics">Statistik</a>
+                <a class="nav-link text-light" href="/statistics">Statistik</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/news">Berita Terkini</a>
+                <a class="nav-link text-light" href="/news">Berita Terkini</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/about">Tentang kami</a>
+                <a class="nav-link text-light" href="/about">Tentang kami</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/help">Bantu Kami</a>
+                <a class="nav-link text-light" href="/support">Bantu Kami</a>
             </li>
         </ul>
     </nav>
 
+    <div class="container-fluid my-purple text-light">
+        <div class="container pt-5 pb-5">
 
-    <h1>news</h1>
+            <div class="row my-2 mb-3">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="firstCountry">Country</label>
+                        </div>
+                        <select class="custom-select" id="firstCountry">
+                            <option value="1">Indonesia</option>
+                            <option value="2">Global</option>
+                            <option value="3">Italia</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+            <div class="row my-5">
+                <div class="col-3">
+                    <img src="/public/1.jpeg" alt="..." class="img-fluid">
+                </div>
+                <div class="col-9">
+                    <div class="bold-1 mb-2">
+                        Kasus terkonfirmasi Positif COVID-19 10.843, Pasien Sembuh Jadi 1.665
+                    </div>
+                    <p>
+                        JAKARTA - Pemerintah Indonesia melalui Gugus Tugas Percepatan Penanganan COVID-19 mencatat jumlah kasus terkonfirmasi positif COVID-19 per hari ini Sabtu (2/5) menjadi 10.843 setelah ada penambahan 292 orang. Sedangkan pasien yang dinyatakan sembuh menjadi 1.665 setelah ada penambahan sebanyak 74 orang.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-3">
+                    <img src="/public/2.jpg" alt="..." class="img-fluid">
+                </div>
+                <div class="col-9">
+                    <div class="bold-1 mb-2">
+                        Infografis COVID-19
+                    </div>
+                    <p>
+                        Untuk mendapatkan infografis dalam resolusi tinggi atau versi bahasa Inggris (English version), silakan kunjungi tautan berikut ini.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-3">
+                    <img src="/public/3.jpeg" alt="..." class="img-fluid">
+                </div>
+                <div class="col-9">
+                    <div class="bold-1 mb-2">
+                        Inovasi Guru di Perbatasan Manfaatkan Radio Sebagai Media Belajar Mengajar
+                    </div>
+                    <p>
+                        JAKARTA - Demi tetap menegakkan kegiatan belajar mengajar dari rumah sesuai anjuran pemerintah selama pandemi COVID-19, para guru Sekolah Dasar (SD) Kabupaten Sanggau, Kalimantan Barat yang berbatasan langsung dengan Malaysia memanfaatkan jaringan Radio Republik Indonesia (RRI) sebagai media pembelajaran karena keterbatasan jaringan internet di daerah itu.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="page-footer font-small elegant-color">
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright
+            <a href="/">covidia</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+    <script src="/controllers/index.js"></script>
 </body>
 </html>
 
