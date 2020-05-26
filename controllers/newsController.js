@@ -34,13 +34,11 @@ let showCountryNews = () => {
     }
 
     $.ajax(settings).done(function (response) {
+        loading.innerHTML = ""
         let articles = response.articles
         let totalResults = response.totalResults
-        console.log(totalResults)
-        loading.innerHTML = ""
-        if(totalResults <= 0  ){
-            resultMsg.innerHTML = "there is no article"
-        }else{
+        if (totalResults <= 0) resultMsg.innerHTML = "there is no article"
+        else{
             for(let i = 0; i<(totalResults); i++){
                 $('#newsList').append(`
                     <div class="row my-5">
@@ -63,7 +61,8 @@ let showCountryNews = () => {
         }
     }).fail(function(xhr, status, error){
 
-        resultMsg.innerHTML = `Oops X(\nError -  + ${xhr.status} + : + ${xhr.statusText}`
+        resultMsg.innerHTML = `Oops X(
+            Error - ${xhr.status} :  ${xhr.statusText}`
 
     })
 }
