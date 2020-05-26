@@ -16,8 +16,6 @@ $("#country").select2({
 
 let showCountryNews = () => {
     let countryValue = country.value
-    console.log(countryValue)
-
     loading.innerHTML =
     `<div class='spinner-border' role='status'>
         <span class='sr-only'>Loading...</span>
