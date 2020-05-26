@@ -61,8 +61,9 @@ let showCountryNews = () => {
             }
         }
     }).fail(function(xhr, status, error){
+        
         loading.innerHTML = ""
-        resultMsg.innerHTML = "Oops xD\n there is an error from getting the news"
+        resultMsg.innerHTML = "there is no article"
 
     })
 }
