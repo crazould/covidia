@@ -61,9 +61,8 @@ let showCountryNews = () => {
             }
         }
     }).fail(function(xhr, status, error){
-
-        resultMsg.innerHTML = `Oops X(
-            Error - ${xhr.status} :  ${xhr.statusText}`
+        loading.innerHTML = ""
+        resultMsg.innerHTML = "Oops xD\n there is an error from getting the news"
 
     })
 }
