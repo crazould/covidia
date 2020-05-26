@@ -28,6 +28,7 @@ let showCountryNews = () => {
     var settings = {
         "url": myurl,
         "method": "GET",
+        "crossDomain": true,
         "timeout": 0,
     }
 
