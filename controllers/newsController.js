@@ -37,7 +37,6 @@ let showCountryNews = () => {
         loading.innerHTML = ""
         let articles = response.articles
         let totalResults = response.totalResults
-        console.log(totalResults)
         if ( parseInt(totalResults) === 0) resultMsg.innerHTML = "there is no article"
         else{
             for(let i = 0; i<(totalResults); i++){
@@ -61,9 +60,8 @@ let showCountryNews = () => {
             }
         }
     }).fail(function(xhr, status, error){
-        
         loading.innerHTML = ""
-        resultMsg.innerHTML = "there is no article"
+        resultMsg.innerHTML = "API server is busy"
 
     })
 }
