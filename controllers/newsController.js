@@ -37,7 +37,8 @@ let showCountryNews = () => {
         loading.innerHTML = ""
         let articles = response.articles
         let totalResults = response.totalResults
-        if (totalResults <= 0) resultMsg.innerHTML = "there is no article"
+        console.log(totalResults)
+        if ( parseInt(totalResults) === 0) resultMsg.innerHTML = "there is no article"
         else{
             for(let i = 0; i<(totalResults); i++){
                 $('#newsList').append(`
