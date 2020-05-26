@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="icon" type="image/png" href="public/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet">
@@ -16,7 +17,7 @@
 </head>
 <body>
    
-    <nav class="navbar navbar-expand-sm sticky-top navbar-dark elegant-color">
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-purple">
         <a class="navbar-brand" href="/">Covidia</a>
         <ul class="navbar-nav nav mr-auto justify-content-end collapse navbar-collapse">
             <li class="nav-item">
@@ -25,8 +26,8 @@
             <li class="nav-item">
                 <a class="nav-link text-light" href="/statistics">Statistik</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="/news">Berita Terkini</a>
+            <li class="nav-item active">
+                <a class="nav-link text-light " href="/news">Berita Terkini</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-light" href="/about">Tentang kami</a>
@@ -37,71 +38,221 @@
         </ul>
     </nav>
 
-    <div class="container-fluid my-purple">
+    <div class="container-fluid my-purple text-dark">
         <div class="container pt-5 pb-5">
-
-            <div class="row my-2 mb-3">
+            <div class="row mb-3">
                 <div class="col">
                     <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="firstCountry">Country</label>
-                        </div>
-                        <select class="custom-select" id="firstCountry">
-                            <option value="1">Indonesia</option>
-                            <option value="2">Global</option>
-                            <option value="3">Italia</option>
+                        <select class="custom-select" id="country" onchange="showCountryNews()">
+                            <option value="AF">Afghanistan</option>
+                            <option value="AL">Albania</option>
+                            <option value="DZ">Algeria</option>
+                            <option value="AO">Angola</option>
+                            <option value="ar">Argentina</option>
+                            <option value="AM">Armenia</option>
+                            <option value="AU">Australia</option>
+                            <option value="AT">Austria</option>
+                            <option value="AZ">Azerbaijan</option>
+                            <option value="BS">Bahamas</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="BY">Belarus</option>
+                            <option value="BE">Belgium</option>
+                            <option value="BZ">Belize</option>
+                            <option value="BJ">Benin</option>
+                            <option value="BT">Bhutan</option>
+                            <option value="BO">Bolivia</option>
+                            <option value="BA">Bosnia and Herzegovina</option>
+                            <option value="BW">Botswana</option>
+                            <option value="BR">Brazil</option>
+                            <option value="BN">Brunei Darussalam</option>
+                            <option value="BG">Bulgaria</option>
+                            <option value="BF">Burkina Faso</option>
+                            <option value="BI">Burundi</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="CM">Cameroon</option>
+                            <option value="CA">Canada</option>
+                            <option value="CI">Ivory Coast</option>
+                            <option value="CF">Central African Republic</option>
+                            <option value="TD">Chad</option>
+                            <option value="CL">Chile</option>
+                            <option value="CN">China</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CG">Congo</option>
+                            <option value="CD">Democratic Republic of Congo</option>
+                            <option value="CR">Costa Rica</option>
+                            <option value="HR">Croatia</option>
+                            <option value="CU">Cuba</option>
+                            <option value="CY">Cyprus</option>
+                            <option value="CZ">Czechia</option>
+                            <option value="DK">Denmark</option>
+                            <option value="DP">Diamond Princess</option>
+                            <option value="DJ">Djibouti</option>
+                            <option value="DO">Dominican Republic</option>
+                            <option value="CD">DR Congo</option>
+                            <option value="EC">Ecuador</option>
+                            <option value="EG">Egypt</option>
+                            <option value="SV">El Salvador</option>
+                            <option value="GQ">Equatorial Guinea</option>
+                            <option value="ER">Eritrea</option>
+                            <option value="EE">Estonia</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="FK">Falkland Islands</option>
+                            <option value="FJ">Fiji</option>
+                            <option value="FI">Finland</option>
+                            <option value="FR">France</option>
+                            <option value="GF">French Guiana</option>
+                            <option value="TF">French Southern Territories</option>
+                            <option value="GA">Gabon</option>
+                            <option value="GM">Gambia</option>
+                            <option value="GE">Georgia</option>
+                            <option value="DE">Germany</option>
+                            <option value="GH">Ghana</option>
+                            <option value="GR">Greece</option>
+                            <option value="GL">Greenland</option>
+                            <option value="GT">Guatemala</option>
+                            <option value="GN">Guinea</option>
+                            <option value="GW">Guinea-Bissau</option>
+                            <option value="GY">Guyana</option>
+                            <option value="HT">Haiti</option>
+                            <option value="HN">Honduras</option>
+                            <option value="HK">Hong Kong</option>
+                            <option value="HU">Hungary</option>
+                            <option value="IS">Iceland</option>
+                            <option value="IN">India</option>
+                            <option value="ID" selected>Indonesia</option>
+                            <option value="IR">Iran</option>
+                            <option value="IQ">Iraq</option>
+                            <option value="IE">Ireland</option>
+                            <option value="IL">Israel</option>
+                            <option value="IT">Italy</option>
+                            <option value="JM">Jamaica</option>
+                            <option value="JP">Japan</option>
+                            <option value="JO">Jordan</option>
+                            <option value="KZ">Kazakhstan</option>
+                            <option value="KE">Kenya</option>
+                            <option value="KP">Korea</option>
+                            <option value="XK">Kosovo</option>
+                            <option value="KW">Kuwait</option>
+                            <option value="KG">Kyrgyzstan</option>
+                            <option value="LA">Lao</option>
+                            <option value="LV">Latvia</option>
+                            <option value="LB">Lebanon</option>
+                            <option value="LS">Lesotho</option>
+                            <option value="LR">Liberia</option>
+                            <option value="LY">Libya</option>
+                            <option value="LT">Lithuania</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="MK">Macedonia</option>
+                            <option value="MG">Madagascar</option>
+                            <option value="MW">Malawi</option>
+                            <option value="MY">Malaysia</option>
+                            <option value="ML">Mali</option>
+                            <option value="MR">Mauritania</option>
+                            <option value="MX">Mexico</option>
+                            <option value="MD">Moldova</option>
+                            <option value="MN">Mongolia</option>
+                            <option value="ME">Montenegro</option>
+                            <option value="MA">Morocco</option>
+                            <option value="MZ">Mozambique</option>
+                            <option value="MM">Myanmar</option>
+                            <option value="NA">Namibia</option>
+                            <option value="NP">Nepal</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="NC">New Caledonia</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="NI">Nicaragua</option>
+                            <option value="NE">Niger</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="KP">North Korea</option>
+                            <option value="NO">Norway</option>
+                            <option value="OM">Oman</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="PS">Palestine</option>
+                            <option value="PA">Panama</option>
+                            <option value="PG">Papua New Guinea</option>
+                            <option value="PY">Paraguay</option>
+                            <option value="PE">Peru</option>
+                            <option value="PH">Philippines</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="QA">Qatar</option>
+                            <option value="XK">Republic of Kosovo</option>
+                            <option value="RO">Romania</option>
+                            <option value="RU">Russia</option>
+                            <option value="RW">Rwanda</option>
+                            <option value="SA">Saudi Arabia</option>
+                            <option value="SN">Senegal</option>
+                            <option value="RS">Serbia</option>
+                            <option value="SL">Sierra Leone</option>
+                            <option value="SG">Singapore</option>
+                            <option value="SK">Slovakia</option>
+                            <option value="SI">Slovenia</option>
+                            <option value="SB">Solomon Islands</option>
+                            <option value="SO">Somalia</option>
+                            <option value="ZA">South Africa</option>
+                            <option value="KR">South Korea</option>
+                            <option value="SS">South Sudan</option>
+                            <option value="ES">Spain</option>
+                            <option value="LK">Sri Lanka</option>
+                            <option value="SD">Sudan</option>
+                            <option value="SR">Suriname</option>
+                            <option value="SJ">Svalbard and Jan Mayen</option>
+                            <option value="SZ">Swaziland</option>
+                            <option value="SE">Sweden</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SY">Syrian Arab Republic</option>
+                            <option value="TW">Taiwan</option>
+                            <option value="TJ">Tajikistan</option>
+                            <option value="TZ">Tanzania</option>
+                            <option value="TH">Thailand</option>
+                            <option value="TL">Timor-Leste</option>
+                            <option value="TG">Togo</option>
+                            <option value="TT">Trinidad and Tobago</option>
+                            <option value="TN">Tunisia</option>
+                            <option value="TR">Turkey</option>
+                            <option value="TM">Turkmenistan</option>
+                            <option value="ae">United Arab Emirates</option>
+                            <option value="UG">Uganda</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="UA">Ukraine</option>
+                            <option value="US">USA</option>
+                            <option value="UY">Uruguay</option>
+                            <option value="UZ">Uzbekistan</option>
+                            <option value="VU">Vanuatu</option>
+                            <option value="VE">Venezuela</option>
+                            <option value="VN">Vietnam</option>
+                            <option value="EH">Western Sahara</option>
+                            <option value="YE">Yemen</option>
+                            <option value="ZM">Zambia</option>
+                            <option value="ZW">Zimbabwe</option>
                         </select>
                     </div>
                 </div>
             </div>
 
-            <div class="row my-5">
-                <div class="col-3">
-                    <img src="/public/1.jpeg" alt="..." class="img-fluid">
-                </div>
-                <div class="col-9">
-                    <div class="bold-1 mb-2">
-                        Kasus terkonfirmasi Positif COVID-19 10.843, Pasien Sembuh Jadi 1.665
-                    </div>
-                    <p class="text-dark">
-                        JAKARTA - Pemerintah Indonesia melalui Gugus Tugas Percepatan Penanganan COVID-19 mencatat jumlah kasus terkonfirmasi positif COVID-19 per hari ini Sabtu (2/5) menjadi 10.843 setelah ada penambahan 292 orang. Sedangkan pasien yang dinyatakan sembuh menjadi 1.665 setelah ada penambahan sebanyak 74 orang.
-                    </p>
-                </div>
+            <div class="row" >
+                <div class="col"></div>
+                <div class="col text-center" id="myLoadingBar"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row" >
+                <div class="col"></div>
+                <div class="col text-center" id="resultMsg"></div>
+                <div class="col"></div>
             </div>
 
-            <div class="row my-5">
-                <div class="col-3">
-                    <img src="/public/2.jpg" alt="..." class="img-fluid">
-                </div>
-                <div class="col-9">
-                    <div class="bold-1 mb-2">
-                        Infografis COVID-19
-                    </div>
-                    <p class="text-dark">
-                        Untuk mendapatkan infografis dalam resolusi tinggi atau versi bahasa Inggris (English version), silakan kunjungi tautan berikut ini.
-                    </p>
-                </div>
+            <div class="container-fluid" id="newsList">
+          
             </div>
+            
 
-            <div class="row my-5">
-                <div class="col-3">
-                    <img src="/public/3.jpeg" alt="..." class="img-fluid">
-                </div>
-                <div class="col-9">
-                    <div class="bold-1 mb-2">
-                        Inovasi Guru di Perbatasan Manfaatkan Radio Sebagai Media Belajar Mengajar
-                    </div>
-                    <p class="text-dark">
-                        JAKARTA - Demi tetap menegakkan kegiatan belajar mengajar dari rumah sesuai anjuran pemerintah selama pandemi COVID-19, para guru Sekolah Dasar (SD) Kabupaten Sanggau, Kalimantan Barat yang berbatasan langsung dengan Malaysia memanfaatkan jaringan Radio Republik Indonesia (RRI) sebagai media pembelajaran karena keterbatasan jaringan internet di daerah itu.
-                    </p>
-                </div>
-            </div>
 
         </div>
     </div>
 
 
-    <footer class="page-footer font-small elegant-color">
+    <footer class="page-footer fixed-bottom font-small bg-purple">
         <div class="footer-copyright text-center py-3">
             © 2020 Copyright
             <a href="/">covidia</a>
@@ -112,6 +263,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script src="/controllers/newsController.js"></script>
 </body>
 </html>

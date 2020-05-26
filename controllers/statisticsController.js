@@ -45,12 +45,12 @@ let drawChart = () => {
                         ((secondCountryTotalDeaths.innerHTML / secondCountryTotalCases.innerHTML) * 100).toFixed(2)
                     ],
                     backgroundColor: [
-                        "rgba(255, 99, 132, 0.2)",
-                        "rgba(54, 162, 235, 0.2)",
+                        "rgba(153, 51, 101, 0.2)",
+                        "rgba(94, 93, 89, 0.2)",
                     ],
                     borderColor: [
-                        "rgba(255,99,132,1)",
-                        "rgba(54, 162, 235, 1)",
+                        "rgba(153, 51, 101,1)",
+                        "rgba(94, 93, 89, 1)",
                     ],
                     borderWidth: 1,
                 },

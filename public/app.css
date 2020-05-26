@@ -28,13 +28,23 @@ body {
     text-align: right;
 }
 
+.align-center{
+    text-align: center;
+}
+
 .my-purple{
     color: #993365;
+}
+
+.bg-purple{
+    background-color: #993365;
 }
 
 a.my-purple:hover{
     color: #530229;
 }
+
+
 
 .my-container{
     height: 84.8vh;
