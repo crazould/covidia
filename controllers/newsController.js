@@ -8,7 +8,6 @@ let newsImg = document.getElementById("newsImg")
 let newsTitle = document.getElementById("newsTitle")
 let newsContent = document.getElementById("newsContent")
 
-
 $("#country").select2({
     placeholder: "Select Country",
     allowClear: true
@@ -28,9 +27,10 @@ let showCountryNews = () => {
     
     var settings = {
         "url": myurl,
+        
         "method": "GET",
         "crossDomain": true,
-        "timeout": 0,
+        "timeout": 0
     }
 
     $.ajax(settings).done(function (response) {
