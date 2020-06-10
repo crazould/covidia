@@ -12,54 +12,58 @@
 </head>
 <body>
    
-    <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-purple">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
         <a class="navbar-brand" href="/">Covidia</a>
-        <ul class="navbar-nav nav mr-auto justify-content-end collapse navbar-collapse">
-            <li class="nav-item active">
-                <a class="nav-link text-light " href="/">Beranda</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="/statistics">Statistik</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="/news">Berita Terkini</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="/about">Tentang kami</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="/support">Bantu Kami</a>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav" >
+            <ul class="navbar-nav nav mr-auto justify-content-end">
+                <li class="nav-item active">
+                    <a class="nav-link text-light " href="/">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/statistics">Statistik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/news">Berita Terkini</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/about">Tentang kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/support">Bantu Kami</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    
-
     <main class="my-container">
-        <section>
-            <div class="home-text-group">
-                <h1 class="text-center bold headline">
+        <section class="center">
+            <div class="text-group">
+                <div class="headline my-purple">
                     Covidia
-                </h1>
+                </div>
                 <div class="grid-layout">
-                    <div class="home-menu "> 
-                        <a href="/" class="my-purple">Beranda</a>
+                    <div class="home-menu"> 
+                        <a href="/" class="text-light">Beranda</a>
                     </div>
                     <div class="home-menu">
-                        <a href="/statistics" class="my-purple">Statistik</a>
+                        <a href="/statistics" class="text-light">Statistik</a>
+                    </div>
+                    <div class="home-menu">
+                        <a href="/news" class="text-light">Berita Terkini</a>
                     </div>
                     <div class="home-menu ">
-                        <a href="/news" class="my-purple">Berita Terkini</a>
+                        <a href="/about" class="text-light">Tentang kami</a>
                     </div>
-                    <div class="home-menu ">
-                        <a href="/about" class="my-purple">Tentang kami</a>
-                    </div>
-                    <div class="home-menu ">
-                        <a href="/support" class="my-purple">Bantu Kami</a>
+                    <div class="home-menu">
+                        <a href="/support" class="text-light">Bantu Kami</a>
                     </div>
                 </div>
-            </div>
-            <div class="home-ilustration-group">
+            </div >
+            <div class="ilustration-group">
                 <div class="covid-ilustration"></div>
                 <a href="http://www.freepik.com" class="my-purple">Designed by pikisuperstar / Freepik</a>
             </div>
