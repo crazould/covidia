@@ -1,4 +1,5 @@
-let API_KEY = `afb68e748fc96a0d08b2e9797f65a86d`
+let API_KEY = `ace2aac7c49d43b2b89d5fc7c51da218`
+let API_KEY_2 = `afb68e748fc96a0d08b2e9797f65a86d`
 let country = document.getElementById("country")
 let loading = document.getElementById("myLoadingBar")
 let resultMsg = document.getElementById("resultMsg")
@@ -25,33 +26,50 @@ let showCountryNews = () => {
     $('#newsList').empty()
 
     let countryText = $( "#country option:selected" ).text();
-    let myurl = "https://gnews.io/api/v3/search?q=covid-19%20"+countryText+"&token="+API_KEY+"&lang="+countryValue
-    let settings = {
+    console.log(countryText)
+
+    let myurl = "https://newsapi.org/v2/top-headlines?q=COVID&country="+countryValue+"&apiKey=" +API_KEY 
+    // myurl = "https://api.smartable.ai/coronavirus/news/"+countryValue
+    // myurl = "https://gnews.io/api/v3/search?q=covid-19%20"+countryText+"&token="+API_KEY_2+"&lang="+countryValue
+
+    console.log(countryValue)
+    
+    var settings = {
         "url": myurl,
         "method": "GET",
         "crossDomain": true,
+        // beforeSend: function(xhrObj) {
+        //     xhrObj.setRequestHeader("Cache-Control", "no-cache");
+        //     xhrObj.setRequestHeader("Subscription-Key", "04866c8119574c299b454bb91ee2b98b");
+        // },
         "timeout": 0
     }
 
     $.ajax(settings).done(function (response) {
         loading.innerHTML = ""
+
         let articles = response.articles
-        let totalResults = response.articleCount
+        // let totalResults = response.articleCount
+        let totalResults = response.totalResults
+
+        console.log(response)
+        console.log(articles)
+        console.log(totalResults)
+
         if ( parseInt(totalResults) === 0) resultMsg.innerHTML = "there is no article"
         else{
             for(let i = 0; i<totalResults; i++){
                 $('#newsList').append(`
-                    <div class="row my-5">
-                        <div class="col-3">
-                            <img src="${articles[i].image}" alt="unavailable" class="img-fluid" id="newsImg">
+                    <div class="grid-layout mt-5">
+                        <div class="news-img " style="background-image: url(${articles[i].urlToImage});">
                         </div>
-                        <div class="col-9">
-                            <div class="bold-1 mb-2" id="newsTitle">
+                        <div class="news-text span-col">
+                            <div class="news-title mb-2" id="newsTitle">
                                 <a href="${articles[i].url}" target="_blank" class="my-purple">
                                     ${articles[i].title}
                                 </a> 
                             </div>
-                            <p class="text-dark" id="newsContent">
+                            <p class="news-content" id="newsContent">
                                 ${articles[i].description}
                             </p>
                         </div>
