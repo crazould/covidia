@@ -15,6 +15,7 @@ $("#country").select2({
 
 let showCountryNews = () => {
     let countryValue = country.value
+
     loading.innerHTML =
     `<div class='spinner-border' role='status'>
         <span class='sr-only'>Loading...</span>
@@ -26,8 +27,8 @@ let showCountryNews = () => {
     let myurl = "https://newsapi.org/v2/top-headlines?q=COVID&country="+countryValue+"&apiKey=" +API_KEY 
     
     var settings = {
-        "url": myurl,
         
+        "url": myurl,
         "method": "GET",
         "crossDomain": true,
         "timeout": 0
@@ -39,6 +40,7 @@ let showCountryNews = () => {
         let totalResults = response.totalResults
         if ( parseInt(totalResults) === 0) resultMsg.innerHTML = "there is no article"
         else{
+
             for(let i = 0; i<(totalResults); i++){
                 $('#newsList').append(`
                     <div class="row my-5">
@@ -62,7 +64,6 @@ let showCountryNews = () => {
     }).fail(function(xhr, status, error){
         loading.innerHTML = ""
         resultMsg.innerHTML = "API server is busy"
-
     })
 }
 
