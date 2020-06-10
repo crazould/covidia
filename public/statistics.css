@@ -1,0 +1,29 @@
+
+
+
+@media only screen and (max-width: 430px) {
+
+    div.col.bold-1{
+        font-size: 0.67rem;
+        /* margin-bottom: 3%; */
+        height: 30px;
+    }
+  
+    div.spinner-border{
+        font-size: 0.35rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .empty{
+        display: none;
+    }
+
+    .bold-1{
+        font-size: 1.25rem;
+    }
+
+}

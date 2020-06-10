@@ -10,6 +10,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/css/mdb.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
     <link rel="stylesheet" href="public/app.css" />
+    <link rel="stylesheet" href="public/statistics.css" />
+
     <title>covidia</title>
 </head>
 
@@ -44,7 +46,7 @@
     <div class="container-fluid my-container my-purple">
         <div class="container horizontal-center pt-2">
             <div class="row my-2 mb-3">
-                <div class="col"></div>
+                <div class="col empty"></div>
                 <div class="col">
                     <div class="input-group mb-3">
                         <select class="custom-select" id="firstCountry" searchable onchange="showFirstCountryData()">
@@ -424,6 +426,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row my-2">
                 <div class="col bold-1">
                     Terkonfirmasi
@@ -459,6 +462,7 @@
                 <div class="col text-end bold-1" id="firstCountryDeathsRatio"></div>
                 <div class="col text-end bold-1" id="secondCountryDeathsRatio"></div>
             </div>
+
             <div class="row my-2">
                 <div class="col"></div>
                 <div class="col-lg-5" id="chartContainer">
@@ -466,6 +470,7 @@
                 </div>
                 <div class="col"></div>
             </div>
+
         </div>
     </div>
 
