@@ -1,0 +1,54 @@
+.lead{
+    margin-top: 12%;
+    font-size: 1.75rem;
+}
+
+home > section{
+    height: 100%;
+    text-align: center;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+section >.text-center{
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media only screen and (max-width: 430px) {
+
+    .lead{
+        margin-top: 40%;
+        font-size: 1.25rem;
+    }
+
+    p{
+        font-size: 1.25rem;
+    }
+    
+    .bold{
+        font-weight: 900;
+        font-size: 2rem;
+    } 
+  
+}
+
+@media only screen and (max-width: 800px) {
+
+    .lead{
+        margin-top: 23%;
+    }
+
+    p{
+        font-size: 1.25rem;
+    }
+    
+    .bold{
+        font-weight: 900;
+        font-size: 2rem;
+    } 
+  
+}
