@@ -95,8 +95,13 @@ a.my-purple:hover{
 }
 
 .span-col{
-    grid-row: 1 / auto;
+    grid-column: span 2 / auto;
 }
+
+.span-row{
+    grid-row: span 2 / auto;
+}
+
 
 .covid-ilustration{
     height: 100%;
