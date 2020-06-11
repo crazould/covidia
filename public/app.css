@@ -195,7 +195,7 @@ div.home-menu > a.text-light{
 
 
 footer{
-    margin-top: 3%;
+    margin-top: 0;
     font-family: 'Montserrat';
     padding-top: 1%;
     padding-bottom: 1%;
@@ -238,16 +238,6 @@ footer > h2{
     .headline{
         margin-top: 15%;
         font-size: 5.25rem;
-    }
-
-    .home-menu{
-        font-size: 1rem;
-        width: 100%;
-        padding: 1%;
-        text-align: center;
-        background-color: #993365;
-        transition: 200ms;
-        border-radius: 1.5rem;
     }
 
     footer{

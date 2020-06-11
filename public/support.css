@@ -3,7 +3,7 @@
     font-size: 1.75rem;
 }
 
-home > section{
+main > section{
     height: 100%;
     text-align: center;
 }
@@ -20,8 +20,8 @@ section >.text-center{
 
 @media only screen and (max-width: 430px) {
 
-    .lead{
-        margin-top: 40%;
+    p.lead.text-center{
+        margin-top: 55%;
         font-size: 1.25rem;
     }
 
