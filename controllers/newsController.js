@@ -28,9 +28,9 @@ let showCountryNews = () => {
     let countryText = $( "#country option:selected" ).text();
     console.log(countryText)
 
-    let myurl = "https://newsapi.org/v2/top-headlines?q=COVID&country="+countryValue+"&apiKey=" +API_KEY 
+    // let myurl = "https://newsapi.org/v2/top-headlines?q=COVID&country="+countryValue+"&apiKey=" +API_KEY 
     // myurl = "https://api.smartable.ai/coronavirus/news/"+countryValue
-    // myurl = "https://gnews.io/api/v3/search?q=covid-19%20"+countryText+"&token="+API_KEY_2+"&lang="+countryValue
+    let myurl = "https://gnews.io/api/v3/search?q=covid-19%20"+countryText+"&token="+API_KEY_2+"&lang="+countryValue
 
     console.log(countryValue)
     
@@ -49,19 +49,20 @@ let showCountryNews = () => {
         loading.innerHTML = ""
 
         let articles = response.articles
-        // let totalResults = response.articleCount
-        let totalResults = response.totalResults
+        let totalResults = response.articleCount
+        // let totalResults = response.totalResults
 
         console.log(response)
         console.log(articles)
         console.log(totalResults)
 
         if ( parseInt(totalResults) === 0) resultMsg.innerHTML = "there is no article"
+        else if (response.errors[0].length > 1) resultMsg.innerHTML = "unavailable, reached max request per day"
         else{
             for(let i = 0; i<totalResults; i++){
                 $('#newsList').append(`
                     <div class="grid-layout mt-5">
-                        <div class="news-img " style="background-image: url(${articles[i].urlToImage});">
+                        <div class="news-img " style="background-image: url(${articles[i].image});">
                         </div>
                         <div class="news-text span-col">
                             <div class="news-title mb-2" id="newsTitle">
