@@ -218,11 +218,25 @@ footer > h2{
     margin-bottom: 0.01%;
 }
 
+.ilustration-1{
+    display: none;
+}
 
 @media only screen and (max-width: 430px) {
 
+    .ilustration-1{
+        display: block;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 12%;
+    }
+
+    .ilustration-1 > a.my-purple{
+        font-size: 0.5rem;
+    }
+
     .headline{
-        margin-top: 23%;
+        margin-top: 15%;
         font-size: 5.25rem;
     }
 
@@ -234,6 +248,10 @@ footer > h2{
         background-color: #993365;
         transition: 200ms;
         border-radius: 1.5rem;
+    }
+
+    footer{
+        margin-top: 15%;
     }
 
 }
@@ -255,7 +273,7 @@ footer > h2{
 
 @media only screen and (max-width: 1030px) {
     
-    .ilustration-group{
+    .ilustration-2{
         display: none;
     }
 
