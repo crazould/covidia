@@ -57,7 +57,7 @@ let showCountryNews = () => {
         console.log(totalResults)
 
         if ( parseInt(totalResults) === 0) resultMsg.innerHTML = "there is no article"
-        else if (response.errors[0].length > 1) resultMsg.innerHTML = "unavailable, reached max request per day"
+        else if (response.errors != undefined) resultMsg.innerHTML = "unavailable, reached max request per day"
         else{
             for(let i = 0; i<totalResults; i++){
                 $('#newsList').append(`
