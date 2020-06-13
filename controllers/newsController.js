@@ -26,13 +26,11 @@ let showCountryNews = () => {
     $('#newsList').empty()
 
     let countryText = $( "#country option:selected" ).text();
-    console.log(countryText)
 
     // let myurl = "https://newsapi.org/v2/top-headlines?q=COVID&country="+countryValue+"&apiKey=" +API_KEY 
     // myurl = "https://api.smartable.ai/coronavirus/news/"+countryValue
     let myurl = "https://gnews.io/api/v3/search?q=covid-19%20"+countryText+"&token="+API_KEY_2+"&lang="+countryValue
 
-    console.log(countryValue)
     
     var settings = {
         "url": myurl,
@@ -52,9 +50,6 @@ let showCountryNews = () => {
         let totalResults = response.articleCount
         // let totalResults = response.totalResults
 
-        console.log(response)
-        console.log(articles)
-        console.log(totalResults)
 
         if ( parseInt(totalResults) === 0) resultMsg.innerHTML = "there is no article"
         else if (response.errors != undefined) resultMsg.innerHTML = "unavailable, reached max request per day"
