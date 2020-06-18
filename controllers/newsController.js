@@ -56,7 +56,7 @@ let showCountryNews = () => {
         else{
             for(let i = 0; i<totalResults; i++){
                 $('#newsList').append(`
-                    <div class="grid-layout mt-5">
+                    <div class="grid-layout mt-5 text-dark">
                         <div class="news-img " style="background-image: url(${articles[i].image});">
                         </div>
                         <div class="news-text span-col">
